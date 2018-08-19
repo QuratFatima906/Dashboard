@@ -3,22 +3,36 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
-  /*font-family: 'Roboto', Open Sans;*/
   color:#fff;
-  background: #666;
   font-size: 14px;
-  /*padding: 30px;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin:0;
   padding: 0;
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-/*Sidebar*/
+/*========= Navigation =========*/
+.nav-wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  float: right;
+}
+.nav-icon{
+  margin: 2em;
+}
+.nav-wrapper:first-child{
+  margin-right: 2em;
+}
+
+/*========= Sidebar ==========*/
 
 .sidebar-wrapper{
   background: #666;
@@ -27,23 +41,25 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   min-height: 800px;
   color:#fff;
-  /*border:1px solid yellow ;*/
 }
 .sidebar-wrapper hr{
   width:85%;
   background-color: #9e9e9e;
   height: 0.15px;
   opacity: 0.25;
+  filter: alpha(opacity=25); /* For IE8 and earlier */
 }
 .sidebar-logo{
   background: url('../images/SLICES/logobase.png');
   position: relative;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   flex-wrap: wrap;
   align-content: center;
 }
 
-.sidebar-logo figure{
+.sidebar-logo img{
   display: block;
   padding: 2em;
   margin: auto;
@@ -53,9 +69,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color:#0e0f17;
   display: block;
   align-content: center;
-  padding: 0.5em;
+  padding: 1.5em;
 }
-.sidebar-profile figure,
+.sidebar-profile img,
 .sidebar-profile .user-name{
   display: block;
   margin-left: auto;
@@ -68,15 +84,348 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  /*border:1px solid yellow ;*/
-  width: 100%;
   margin:1em;
 }
 .sidebar-categories p{
- margin: auto;
- margin-left: 0px;
+  display: block;
+  margin:auto auto auto 15px;
 }
-.sidebar-categories figure img{
+.sidebar-categories img{
+  display: block;
+  padding: 1em;
+  margin-left: 4em;
+}
+/*========== Main Container ========*/
+.main-wrapper{
+  background: url('../images/SLICES/bg.png');
+  object-fit: contain;
   width: 80%;
-  margin-left: 0.75em;
+  height: 800px;
+  margin-left: 20%;
+  margin-top: 0;
+  border: 1px solid grey;
 }
+/*======== Feed Dialog ============*/
+.feed-container{
+  background-color: #666;
+  color: #fff;
+  /*width: 505px;
+  height: 310px;*/
+  /*width: 430px;*/
+  width: 42%;
+  height: 278px;
+  overflow: hidden;
+  margin:0;
+  margin-left: 20%;
+  margin-top: 150px;
+}
+  .feed-icon{
+    width: 150px;
+    height: 40px;
+  }
+  .filter-icon{
+    float: right;
+    margin:8px 20px 0 0;
+  }
+  .feed-thread{
+    background-color:#fff;
+    border-radius: 15px;
+ /* width:475px;
+ height: 145px;*/
+ font-size: 12px;
+ width:95%;
+ height: 47%;
+ color:#666; 
+ margin: 0 10px 10px 10px;
+}
+
+.feed-action-container{
+  display: flex;
+  flex-flow: row wrap;
+  width: 475px; 
+  margin:0;
+  padding: 0;
+}
+.feed-action{
+  margin-left: 20px;
+  margin-right: 20px;
+  display: block;
+}
+.feed-action-container .superScript{
+  display: block;
+  margin:0 0 0 0;
+  margin-left: -15px;
+  padding-top:3px;
+  padding-bottom: 0;
+  font-size: 8px;
+
+}
+.feed-user-info{
+  display: flex;
+  flex-flow: row;
+}
+.feed-user-info img{
+  width:30px;
+  height: 30px;
+  margin-top:15px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.feed-user-name{
+
+  display: block;
+  margin-top: 0;
+  font-size: 10px;
+}
+.feed-user-name p{
+  margin:0;
+}
+.feed-user-name:last-child{
+  padding-top: 15px;
+}
+
+.feed-heading{
+  text-transform: uppercase;
+}
+.feed-content{
+  margin:5px 15px 0px 15px;
+}
+.feed-content p{
+  margin:0;
+}
+.feed-container hr{
+  background-color: #9e9e9e;
+  height: 0.15px;
+  opacity: 0.25;
+  filter: alpha(opacity=25); /* For IE8 and earlier */
+
+}
+.feed-action img{
+  width:70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feed-action p{
+  margin:0;
+  font-size: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+.feed-footer{
+  width: 42%;
+  display: flex;
+  flex-flow: row wrap;
+  background: #000;
+  opacity: 0.37;
+  margin-left: 20%;
+}
+.feed-footer p{
+  margin: 0 8px 0 8px;
+  color:#fff;
+  padding: 2%;
+
+}
+
+/*========= People Doalig =========*/
+.people-container{
+  background-color: #173750;
+  /*width: 330px;
+  height: 210px;*/
+  width: 32%;
+  height: 300px;
+  padding-top: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 63%;
+  margin-top:-310px;
+}
+
+
+.people-container .people-item{
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 15px;
+}
+.people-container .people-item img{
+  width: 40px;
+  height: 40px;
+}
+.people-container .people-item p{
+  margin: 0;
+  margin: 5px 0 0 10px;
+  font-size: 12px;
+}
+.more-link{
+  margin: 0;
+  margin-left: 55px;
+  margin-right: auto;
+  margin: 10px auto 0 55px;
+  font-size: 9px;
+}
+.people-container .vertical-line{
+  height: 200px;
+  width: 1px;
+  border-left: 1px;
+  background-color: #9e9e9e;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.people-container .people-icon img{
+  margin-right: 0;
+  width: 150px;
+  margin-top: 65px;
+}
+
+/*========= Message Box =========*/
+.message-container{
+  background-color: #ff9e01;
+  width: 34.5%;
+  height: 265px;
+  padding-bottom: 5px;
+  margin-left: 27.5%; 
+  margin-top: 10px;
+}
+.message-user-name{
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px 0 0 20px;
+
+}
+.message-user-name p{
+  margin:0;
+  text-transform: uppercase;
+
+}
+
+.message-user-name .back{
+  width:30px;
+  height: 30px;
+  margin: -5px 4px 0 4px;
+}
+.message-user-name .message-icon{
+  margin-left: 23px;
+  float: right;
+  margin-top: -20px;
+  padding: 0;
+  width: 180px;
+  height: 61px;
+}
+.message-body{
+  background-color: #ffefcf;
+  color: #000;
+  border-radius: 15px;
+  width: 95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px;
+}
+.message-receiver{
+  display: flex;
+  flex-flow: row wrap;
+  margin:10px 0px 0 10px;
+}
+.message-receiver img{
+  padding: 10px;
+}
+.message-receiver p{
+ margin-right: 4px;
+ margin-left: -2px;
+ font-size: 12px;
+}
+.message-thread-res{
+  background-color: #fff; 
+  width: 65%;
+  border-radius: 10px;
+  display: block;
+  margin-left: 10px;
+  margin-right: auto;
+  font-size: 12px;
+  border: 1px solid #fff;
+}
+.message-thread-res p{
+  padding: 1px;
+  margin:10px;
+}
+
+.message-thread-sent{
+  border: 1px solid #17344c;
+  background-color: #17344c; 
+  color:#fff;
+  width: 65%;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 12px;
+  margin-top: 9px;
+
+}
+.message-thread-sent p{
+  padding: 1px;
+  margin:10px;
+}
+.reply{
+  height: 20px;
+  width: 95%;
+  border: 1px solid #17344c;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.reply img{
+  float: right;
+}
+
+/*========= Library =========*/
+
+.library-container{
+  background-color: #b32451;
+  width: 30%;
+  height: 265px;
+  margin-left: 63%;
+  margin-top:-273px;
+  padding: 10px 10px 0 10px;
+}
+.library-collection{
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+.library-item{
+  display: block;
+  margin: 15px 5px 0 5px;
+
+}
+.library-item p{
+  margin: 0;
+  margin-top: 4px;
+  font-size: 10px;
+  text-align: center;
+}
+.library-item img{
+  width: 45%;
+  height: 45%;
+  align-self: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@keyframes expand-feed{
+  0%{
+   width: 505px;
+   height: 310px;
+ }
+ 100%{
+  width: 330px;
+  height: 210px;
+}
+}
+
