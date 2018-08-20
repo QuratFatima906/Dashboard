@@ -1,0 +1,46 @@
+@media screen and (max-height: 640px) {
+
+  .sidebar-categories p{
+   visibility: hidden;
+   /*font-size: 0;*/
+ }
+ .sidebar-logo{
+  position: relative;
+  margin-right: auto;
+  margin-left: 0;
+  width: 100%;
+  
+
+}
+
+.sidebar-logo img{
+  min-width: 80px;
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
+.sidebar-categories{
+  border:1px solid yellow ;
+  align-items: center;
+  margin: 1em;
+}
+.sidebar-categories img{
+  min-width: 20%;
+  width:40%;
+  padding:5px; 
+  margin-left: auto;
+  margin-right: auto;
+  border:1px solid yellow ;
+}
+
+}
+
+
+@media screen and (min-height: 641px) {
+
+}
+
+@media screen and (min-height: 1008px) {
+
+}
