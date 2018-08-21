@@ -2,12 +2,36 @@
 .sidebar-wrapper{
   visibility: hidden;
 }
+.flex-wrapper{
+  margin: 0 7em 0 7em;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  border: 1px solid yellow;
+  /*padding: 2em;*/
+}
+
+.feed{
+  width: 58%;
+  margin: 10px;
+}
+.people-container{
+  width:80%;
+  margin: 10px;
+}
+.message-container{
+  width:80%;
+  margin: 10px;
+}
+.library-container{
+  width:80%;
+  margin: 10px;
+}
 
 }
 
 
 @media screen and (min-width: 800px) and (max-width: 1297px) {
-
 
   .sidebar-categories p{
    visibility: hidden;
