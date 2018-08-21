@@ -1,8 +1,16 @@
-@media screen and (max-height: 640px) {
+@media screen and (max-width: 799px) {
+.sidebar-wrapper{
+  visibility: hidden;
+}
+
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1297px) {
+
 
   .sidebar-categories p{
    visibility: hidden;
-   /*font-size: 0;*/
  }
  .sidebar-logo{
   position: relative;
@@ -21,26 +29,15 @@
   margin-right: auto; 
 }
 .sidebar-categories{
-  border:1px solid yellow ;
   align-items: center;
   margin: 1em;
 }
 .sidebar-categories img{
-  min-width: 20%;
-  width:40%;
-  padding:5px; 
-  margin-left: auto;
-  margin-right: auto;
-  border:1px solid yellow ;
+  min-width: 2vw;
+  width:4vw;
+  display: block;
+  margin-left: 7vw;
 }
 
-}
-
-
-@media screen and (min-height: 641px) {
-
-}
-
-@media screen and (min-height: 1008px) {
 
 }

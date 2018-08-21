@@ -18,7 +18,6 @@ body{
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
-
 /*========= Navigation =========*/
 .nav-wrapper{
   display: flex;
@@ -38,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #666;
   width:20%;
   position: absolute;
-  height: 100%;
+  /*height: 100%;*/
   min-height: 800px;
   color:#fff;
 }
@@ -87,34 +86,49 @@ h1, h2, h3, h4, h5, h6 {
   margin:1em;
 }
 .sidebar-categories p{
-  display: block;
+  margin: 0;
   margin:auto auto auto 15px;
 }
 .sidebar-categories img{
-  display: block;
-  padding: 1em;
-  margin-left: 4em;
+  margin: 1em 0 1em 5em;
 }
 /*========== Main Container ========*/
 .main-wrapper{
   background: url('../images/SLICES/bg.png');
-  object-fit: contain;
-  width: 80%;
-  height: 800px;
-  margin-left: 20%;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  /*width: 80%;*/
+  width: 100%;
+  /*height: 100%;*/
+  height: 799px;
+  /*margin-left: 20%;*/
   margin-top: 0;
   border: 1px solid grey;
 }
+.flex-wrapper{
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  padding-top: 4em;
+  margin-left: 20%;
+}
+.flex-item{
+}
+
 /*======== Feed Dialog ============*/
+.feed{
+ width: 42%;
+ margin: 0 10px 10px 0;
+}
 .feed-container{
   background-color: #666;
   color: #fff;
-  width: 42%;
-  height: 230px;
+  width: 100%;
+  min-width:425px;
+  height: 220px;
   overflow: hidden;
-  margin:0;
-  margin-left: 20%;
-  margin-top: 220px;
+  margin-bottom: 0;
 }
 .feed-icon{
   width: 150px;
@@ -212,30 +226,32 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5px;
 }
 .feed-footer{
-  width: 42%;
+  min-width: 425px;
+  width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row wrap;  
+  align-items: center;
+  justify-content: center;
   background: #000;
-  opacity: 0.37;
-  margin-left: 20%;
+  opacity: 0.47;
 }
 .feed-footer p{
-  margin: 0 8px 0 8px;
+  margin:3%;
   color:#fff;
-  padding: 2%;
 
 }
 
 /*========= People Doalig =========*/
 .people-container{
   background-color: #173750;
+  min-width:27%;
   width: 32%;
-  height: 250px;
+  /*width: 18vw;*/
+  height: 255px;
   padding-top: 10px;
   display: flex;
   flex-flow: row wrap;
-  margin-left: 63%;
-  margin-top:-262px;
+  margin: 0 30px 10px 0;
 }
 
 
@@ -274,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 .people-container .people-icon img{
   margin-right: 0;
   width: 150px;
-  margin-top: 33px;
+  margin-top: 45px;
 }
 
 /*========= Message Box =========*/
@@ -283,8 +299,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 34.5%;
   height: 205px;
   padding-bottom: 5px;
-  margin-left: 27.5%; 
-  margin-top: 10px;
+  margin: 0 10px 10px 0;
 }
 .message-user-name{
   display: flex;
@@ -382,11 +397,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .library-container{
   background-color: #b32451;
+  min-width:27%;
   width: 30%;
   height: 200px;
-  margin-left: 63%;
-  margin-top:-210px;
   padding: 10px 10px 0 10px;
+  margin: 0 30px 10px 0;
 }
 .library-collection{
   display: flex;
@@ -413,8 +428,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: auto;
   margin-right: auto;
 }
-.library-container .library-icon{
-  margin-top: -80px;
+.library-container .library-icon img{
+  margin-top: -30px;
+  width: 120px;
   margin-left: -10px;
   float: left;
 }
@@ -428,4 +444,5 @@ h1, h2, h3, h4, h5, h6 {
   height: 210px;
 }
 }
+
 
